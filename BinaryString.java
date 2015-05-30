@@ -26,6 +26,9 @@ public class BinaryString {
 	}
 
 	public void set(int index, char value) {
+		if (index < 0 || index >= bits.length) {
+			throw new BinaryStringException("Fallo en el index");
+		}
 		bits[index] = value;
 	}
 
