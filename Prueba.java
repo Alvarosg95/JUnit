@@ -56,4 +56,11 @@ public class Prueba {
 
 		}
 	}
+
+	// Comprueba que al invocar el método set() con un valor diferente a '0' o
+	// '1' se eleva una excepción
+	@Test(expected = BinaryStringException.class)
+	public void testInvalidBitValue() {
+		bitset4.set(1, '5');
+	}
 }

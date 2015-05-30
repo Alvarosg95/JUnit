@@ -29,6 +29,11 @@ public class BinaryString {
 		if (index < 0 || index >= bits.length) {
 			throw new BinaryStringException("Fallo en el index");
 		}
+
+		if (value != '0' && value != '1') {
+			throw new BinaryStringException("Fallo en el value");
+		}
+
 		bits[index] = value;
 	}
 
