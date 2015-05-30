@@ -48,10 +48,10 @@ public class BinaryString {
 		String result = " ";
 
 		for (int i = 0; i < bits.length; i++) {
-			if (bits[i] == 1) {
+			if (bits[i] == '1') {
 				result += "1";
 			} else {
-				result += 0;
+				result += "0";
 			}
 		}
 

@@ -2,10 +2,11 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class Prueba {
-	private BinaryString bitset1, bitset2, bitset3, bitset4;
+	private BinaryString bitset1, bitset2, bitset3, bitset4, bitset5;
 	private String stringPrueba2 = "1010101010";
 	private String stringPrueba3 = "100101";
 	private String stringPrueba4 = "0110101";
+	private String stringPrueba5 = "1111000";
 
 	@Before
 	public void antes() {
@@ -13,6 +14,7 @@ public class Prueba {
 		bitset2 = new BinaryString(stringPrueba2);
 		bitset3 = new BinaryString(stringPrueba3);
 		bitset4 = new BinaryString(stringPrueba4);
+		bitset5 = new BinaryString(stringPrueba5);
 	}
 
 	// Comprueba que al crear un bitset de longitud N con cada uno de los dos
@@ -62,5 +64,12 @@ public class Prueba {
 	@Test(expected = BinaryStringException.class)
 	public void testInvalidBitValue() {
 		bitset4.set(1, '5');
+	}
+
+	// Comprueba que si un bitset se inicializa con el valor "1111000", el
+	// método toString() devuelve dicho valor
+	@Test()
+	public void testToString() {
+		assertEquals(" 1111000", bitset5.toString());
 	}
 }
