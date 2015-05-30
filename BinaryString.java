@@ -30,6 +30,9 @@ public class BinaryString {
 	}
 
 	public char get(int index) {
+		if (index < 0 || index >= bits.length) {
+			throw new BinaryStringException("Fallo por index en el get");
+		}
 		return bits[index];
 	}
 
